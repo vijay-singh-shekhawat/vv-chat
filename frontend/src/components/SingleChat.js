@@ -2,16 +2,16 @@ import { FormControl } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import "./styles.css";
-import { IconButton, Spinner, useToast } from "@chakra-ui/react";
+import { IconButton, Spinner, useToast ,InputGroup} from "@chakra-ui/react";
 import { getSender, getSenderFull } from "../config/ChatLogics";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { ArrowBackIcon } from "@chakra-ui/icons";
+import { ArrowBackIcon,SearchIcon} from "@chakra-ui/icons";
 import ProfileModal from "./miscellaneous/ProfileModal";
 import ScrollableChat from "./ScrollableChat";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
-
+import Picker from 'emoji-picker-react';
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
@@ -25,6 +25,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [socketConnected, setSocketConnected] = useState(false);
   const [typing, setTyping] = useState(false);
   const [istyping, setIsTyping] = useState(false);
+  const [emoji, setEmoji] = useState(false);
   const toast = useToast();
 
   const defaultOptions = {
@@ -136,7 +137,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       }
     });
   });
-
+  const onEmojiClick = (event, emojiObject) => {
+    console.log(emojiObject);
+    setNewMessage(value => value + emojiObject.emoji);
+  };
   const typingHandler = (e) => {
     setNewMessage(e.target.value);
 
@@ -239,6 +243,9 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               ) : (
                 <></>
               )}
+               { emoji && <Picker  onEmojiClick={onEmojiClick} />}
+              <InputGroup>
+              <IconButton aria-label='Search database' onClick={()=>{setEmoji(val => !val)}} icon={<SearchIcon />} />
               <Input
                 variant="filled"
                 bg="#E0E0E0"
@@ -246,6 +253,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 value={newMessage}
                 onChange={typingHandler}
               />
+              </InputGroup>
             </FormControl>
           </Box>
         </>
