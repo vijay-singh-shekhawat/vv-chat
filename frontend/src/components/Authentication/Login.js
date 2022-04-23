@@ -70,7 +70,7 @@ const Login = () => {
   };
 
   return (
-    <VStack  spacing="10px" >
+    <VStack  spacing="10px" bg="gray.900" >
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
@@ -110,7 +110,7 @@ const Login = () => {
         colorScheme="red"
         width="100%"
         onClick={() => {
-          setEmail("guest@example.com");
+          setEmail("myguest@example.com");
           setPassword("123456");
         }}
       >

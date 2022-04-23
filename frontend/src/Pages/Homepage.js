@@ -39,7 +39,7 @@ function Homepage() {
           <img src={logo} alt="logo"/>
         </Text>
       </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+      <Box  bg="gray.900" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
             <Tab>Login</Tab>

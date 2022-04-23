@@ -10,7 +10,7 @@ import { ColorModeScript } from '@chakra-ui/react'
 import theme from './theme'
 
 ReactDOM.render(
-  <ChakraProvider > 
+  <ChakraProvider theme={theme}> 
     <BrowserRouter>
       <ChatProvider>
      

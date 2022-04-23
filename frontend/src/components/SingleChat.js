@@ -245,10 +245,11 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               )}
                { emoji && <Picker  onEmojiClick={onEmojiClick} />}
               <InputGroup>
-              <IconButton aria-label='Search database' onClick={()=>{setEmoji(val => !val)}} icon={<SearchIcon />} />
+              <IconButton aria-label='Search database'  color="gray.900" Click={()=>{setEmoji(val => !val)}} icon={<SearchIcon />} />
               <Input
                 variant="filled"
                 bg="#E0E0E0"
+                color="gray.900"
                 placeholder="Enter a message.."
                 value={newMessage}
                 onChange={typingHandler}
