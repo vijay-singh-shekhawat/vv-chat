@@ -72,20 +72,20 @@ Start the Client
 # Features
 
 ### Authenticaton
-![](https://github.com/vijay-singh-shekhawat/vv-chat/master/screenshots/login.PNG)
+![](https://github.com/vijay-singh-shekhawat/vv-chat/screenshots/login.PNG)
 
 
 ### One to One chat
-![](https://github.com/vijay-singh-shekhawat/vv-chat/master/screenshots/mainscreen.PNG)
+![](https://github.com/vijay-singh-shekhawat/vv-chat/screenshots/mainscreen.PNG)
 ### Search Users
-![](https://github.com/vijay-singh-shekhawat/vv-chat/master/screenshots/search.PNG)
+![](https://github.com/vijay-singh-shekhawat/vv-chat/screenshots/search.PNG)
 ### Create Group Chats
-![](https://github.com/vijay-singh-shekhawat/vv-chat/master/screenshots/new%20grp.PNG)
+![](https://github.com/vijay-singh-shekhawat/vv-chat/screenshots/new%20grp.PNG)
 
 ### Add or Remove users from group
-![](https://github.com/vijay-singh-shekhawat/vv-chat/master/screenshots/add%20rem.PNG)
+![](https://github.com/vijay-singh-shekhawat/vv-chat/screenshots/add%20rem.PNG)
 ### View Other user Profile
-![](https://github.com/vijay-singh-shekhawat/vv-chat/master/screenshots/profile.PNG)
+![](https://github.com/vijay-singh-shekhawat/vv-chat/screenshots/profile.PNG)
 ## Made By
 
 - [@Vijay Singh](https://github.com/vijay-singh-shekhawat)
